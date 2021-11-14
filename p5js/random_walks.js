@@ -10,7 +10,9 @@ function setup() {
 
 function draw(){
   background(240);
-  ellipse(init_x + delta_x, init_y + delta_y,20,20);
+  line(init_x,0,init_x,400);
+  line(0,init_y,400,init_y);
+  ellipse(init_x + delta_x, init_y - delta_y,20,20);
   delta_x += random([-1,0,1]);
   delta_y += random([-1,0,1]);
   text('Δx: ' + delta_x + ', Δy: ' + delta_y,10,390);
