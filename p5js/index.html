@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>p5.js 예제</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <script type="text/javascript">
+      let query = location.href.split("?")[1];
+      let p5element = document.createElement('script');
+
+      if (typeof query !== 'undefined' && query.slice(0,3) == 'js='){
+        p5element['src'] = query.slice(3) + '.js';
+      } else {
+        p5element['src'] = 'simple_ex.js';
+      }
+
+      document.head.appendChild(p5element);
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="?js=random_walks">random_walks.js</a></li>
+    </ul>
+  </body>
+</html>
