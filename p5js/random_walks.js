@@ -15,5 +15,5 @@ function draw(){
   ellipse(init_x + delta_x, init_y - delta_y,20,20);
   delta_x += random([-1,0,1]);
   delta_y += random([-1,0,1]);
-  text('Δx: ' + ('   ' + delta_x).slice(-4) + '\nΔy: ' + ('   ' + delta_y).slice(-4),10,390);
+  text('Δx: ' + ('   ' + delta_x).slice(-4) + '\nΔy: ' + ('   ' + delta_y).slice(-4),10,380);
 }
